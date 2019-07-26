@@ -7,10 +7,12 @@ class CustomOverlayTableViewController: UITableViewController {
     @IBOutlet weak var cell: UITableViewCell!
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         navigationController?.setToolbarHidden(true, animated: animated)
     }
 
