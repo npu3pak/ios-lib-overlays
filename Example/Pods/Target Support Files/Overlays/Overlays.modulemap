@@ -1,0 +1,6 @@
+framework module Overlays {
+  umbrella header "Overlays-umbrella.h"
+
+  export *
+  module * { export * }
+}
