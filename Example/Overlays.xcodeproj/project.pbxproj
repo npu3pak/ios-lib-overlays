@@ -16,6 +16,7 @@
 		CE7886FA02342BE1BE068490 /* Pods_Overlays_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F26F8DB9F5BF704B68E09F /* Pods_Overlays_Example.framework */; };
 		DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */; };
 		DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12848422EABC3E00181CEA /* CustomOverlay.swift */; };
+		DB12849322EACABF00181CEA /* CustomOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B5A1DEE87642FA2702779EAA /* Pods-Overlays_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overlays_Tests.release.xcconfig"; path = "Target Support Files/Pods-Overlays_Tests/Pods-Overlays_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayViewController.swift; sourceTree = "<group>"; };
 		DB12848422EABC3E00181CEA /* CustomOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
+		DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayTableViewController.swift; sourceTree = "<group>"; };
 		E6EFDE5524DD248593B9C2E9 /* Pods_Overlays_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overlays_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96CD335D6842A14DA9D9732 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */,
+				DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */,
+				DB12849322EACABF00181CEA /* CustomOverlayTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */,
 			);
