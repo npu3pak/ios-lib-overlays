@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6E407B0CF6100780BAB666E4 /* Pods_Overlays_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EFDE5524DD248593B9C2E9 /* Pods_Overlays_Tests.framework */; };
 		CE7886FA02342BE1BE068490 /* Pods_Overlays_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F26F8DB9F5BF704B68E09F /* Pods_Overlays_Example.framework */; };
+		DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */; };
+		DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12848422EABC3E00181CEA /* CustomOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 		607FACD01AFB9204008FA782 /* Overlays_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overlays_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9ADE91549C73F82D32A33E18 /* Pods-Overlays_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overlays_Example.debug.xcconfig"; path = "Target Support Files/Pods-Overlays_Example/Pods-Overlays_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B5A1DEE87642FA2702779EAA /* Pods-Overlays_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overlays_Tests.release.xcconfig"; path = "Target Support Files/Pods-Overlays_Tests/Pods-Overlays_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayViewController.swift; sourceTree = "<group>"; };
+		DB12848422EABC3E00181CEA /* CustomOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		E6EFDE5524DD248593B9C2E9 /* Pods_Overlays_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overlays_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96CD335D6842A14DA9D9732 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,11 +95,10 @@
 		607FACD21AFB9204008FA782 /* Example for Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				DB12848322EABC1100181CEA /* Application */,
+				DB12848222EABC0200181CEA /* Overlays */,
+				DB12848122EABBF500181CEA /* Controllers */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for Overlays";
@@ -150,6 +151,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DB12848122EABBF500181CEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DB12848222EABC0200181CEA /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				DB12848422EABC3E00181CEA /* CustomOverlay.swift */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
+		DB12848322EABC1100181CEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		F9B7347523E3536413888872 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +197,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				5573D0C7A9A81BE82E28FF9F /* [CP] Embed Pods Frameworks */,
+				96945B61C834360289CD12A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,24 +288,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5573D0C7A9A81BE82E28FF9F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Overlays_Example/Pods-Overlays_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Overlays/Overlays.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overlays.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Overlays_Example/Pods-Overlays_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5A802F0F23735A846FEF6701 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +332,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96945B61C834360289CD12A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Overlays_Example/Pods-Overlays_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Overlays/Overlays.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overlays.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Overlays_Example/Pods-Overlays_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -330,8 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
