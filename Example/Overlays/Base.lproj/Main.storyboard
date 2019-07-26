@@ -176,11 +176,11 @@
             <objects>
                 <navigationController id="nzm-7V-o1p" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="unT-8t-cOF">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="XbH-Wq-e6g" kind="relationship" relationship="rootViewController" id="A9H-K4-hXN"/>
+                        <segue destination="XbH-Wq-e6g" kind="relationship" relationship="rootViewController" id="W9B-pf-EmK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W2-a2-HbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,14 +257,23 @@
                             <outlet property="delegate" destination="k0p-oj-hU9" id="AWV-9j-aGb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Cgf-Y8-zDw">
-                        <barButtonItem key="rightBarButtonItem" title="Show inside table" id="h6R-HE-fib">
+                    <toolbarItems>
+                        <barButtonItem title="Show inside table" id="h6R-HE-fib">
                             <connections>
                                 <action selector="showInsideTable:" destination="k0p-oj-hU9" id="Feh-iq-acn"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="gF5-Vc-yO9"/>
+                        <barButtonItem title="Show inside cell" id="UXH-XP-NfF">
+                            <connections>
+                                <action selector="showInsideCell:" destination="k0p-oj-hU9" id="ZAR-lH-Tli"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Cgf-Y8-zDw"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cell" destination="0zF-7u-8iG" id="ddy-Xr-jFD"/>
                         <outlet property="overlay" destination="qXy-1Z-uet" id="dRC-7x-cyj"/>
                     </connections>
                 </tableViewController>

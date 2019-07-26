@@ -8,19 +8,27 @@ public extension UIViewController {
      */
     func showOverlay<T: OverlayView>(_ overlay: T) {
         overlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+
         if let tableVC = self as? UITableViewController {
             let tableView = tableVC.tableView!
             // Makes the overlay to display above the table view cells.
             overlay.layer.zPosition = 1
-            overlay.frame = CGRect(x: 0, y: 0,
-                                   width: tableView.frame.width,
-                                   height: tableView.frame.height)
+            overlay.frame = CGRect(
+                x: 0,
+                y: 0,
+                width: tableView.frame.width,
+                height: tableView.frame.height - topLayoutGuide.length - bottomLayoutGuide.length
+            )
             // The overlay should not scroll with the table view.
             tableView.isScrollEnabled = false
             tableView.addSubview(overlay)
         } else {
-            overlay.frame = view.bounds
+            overlay.frame = CGRect(
+                x: 0,
+                y: topLayoutGuide.length,
+                width: view.bounds.width,
+                height: view.bounds.height - topLayoutGuide.length - bottomLayoutGuide.length
+            )
             view.addSubview(overlay)
         }
     }

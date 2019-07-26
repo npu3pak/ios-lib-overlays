@@ -1,17 +1,18 @@
-//
-//  CustomOverlayTableViewController.swift
-//  Overlays_Example
-//
-//  Created by Евгений Сафронов on 26/07/2019.
-//  Copyright © 2019 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Overlays
 
 class CustomOverlayTableViewController: UITableViewController {
 
     @IBOutlet var overlay: CustomOverlay!
+    @IBOutlet weak var cell: UITableViewCell!
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setToolbarHidden(false, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setToolbarHidden(true, animated: animated)
+    }
 
     @IBAction func showInsideTable(_ sender: Any) {
         showOverlay(overlay)
@@ -20,5 +21,12 @@ class CustomOverlayTableViewController: UITableViewController {
             self.hideAllOverlays()
         }
     }
-    
+
+    @IBAction func showInsideCell(_ sender: Any) {
+        cell.showOverlay(overlay)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.cell.hideAllOverlays()
+        }
+    }
 }
