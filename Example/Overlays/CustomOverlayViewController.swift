@@ -10,7 +10,7 @@ class CustomOverlayViewController: UIViewController {
         showOverlay(overlay)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.hideAllOverlays()
+            self.hideOverlay()
         }
     }
 
@@ -18,7 +18,7 @@ class CustomOverlayViewController: UIViewController {
         containerView.showOverlay(overlay)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.containerView.hideAllOverlays()
+            self.containerView.hideOverlay()
         }
     }
 }

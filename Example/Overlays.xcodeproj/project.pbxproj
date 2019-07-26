@@ -17,6 +17,7 @@
 		DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */; };
 		DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12848422EABC3E00181CEA /* CustomOverlay.swift */; };
 		DB12849322EACABF00181CEA /* CustomOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */; };
+		DB12849522EADF4700181CEA /* CustomOverlaySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12849422EADF4700181CEA /* CustomOverlaySearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayViewController.swift; sourceTree = "<group>"; };
 		DB12848422EABC3E00181CEA /* CustomOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayTableViewController.swift; sourceTree = "<group>"; };
+		DB12849422EADF4700181CEA /* CustomOverlaySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlaySearchViewController.swift; sourceTree = "<group>"; };
 		E6EFDE5524DD248593B9C2E9 /* Pods_Overlays_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overlays_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96CD335D6842A14DA9D9732 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 			children = (
 				DB12847F22EABBEC00181CEA /* CustomOverlayViewController.swift */,
 				DB12849222EACABF00181CEA /* CustomOverlayTableViewController.swift */,
+				DB12849422EADF4700181CEA /* CustomOverlaySearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			files = (
 				DB12848022EABBEC00181CEA /* CustomOverlayViewController.swift in Sources */,
 				DB12849322EACABF00181CEA /* CustomOverlayTableViewController.swift in Sources */,
+				DB12849522EADF4700181CEA /* CustomOverlaySearchViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				DB12848522EABC3E00181CEA /* CustomOverlay.swift in Sources */,
 			);

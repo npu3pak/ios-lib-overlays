@@ -18,7 +18,7 @@ class CustomOverlayTableViewController: UITableViewController {
         showOverlay(overlay)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.hideAllOverlays()
+            self.hideOverlay()
         }
     }
 
@@ -26,7 +26,7 @@ class CustomOverlayTableViewController: UITableViewController {
         cell.showOverlay(overlay)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.cell.hideAllOverlays()
+            self.cell.hideOverlay()
         }
     }
 }

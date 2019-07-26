@@ -6,8 +6,9 @@ public extension UIView {
      Disables user interactions and displays the overlay atop of the current view.
      - Parameter overlay: the overlay view to display.
     */
-    func showOverlay<T: OverlayView>(_ overlay: T) {
-        hideAllOverlays()
+    func showOverlay(_ overlay: OverlayView) {
+        hideOverlay()
+        
         overlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         isUserInteractionEnabled = false
 
@@ -24,7 +25,7 @@ public extension UIView {
     /**
      Enables user interactions and hides all overlays displayed for the current view.
     */
-    func hideAllOverlays() {
+    func hideOverlay() {
         isUserInteractionEnabled = true
 
         let container = superview ?? self

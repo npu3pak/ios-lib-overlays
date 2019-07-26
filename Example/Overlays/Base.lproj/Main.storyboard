@@ -60,6 +60,26 @@
                                             <segue destination="k0p-oj-hU9" kind="show" id="nML-sJ-bu2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CFX-V2-fBN" style="IBUITableViewCellStyleDefault" id="Sdv-fm-Dce">
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sdv-fm-Dce" id="lxW-nJ-QJe">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom Overlay under Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CFX-V2-fBN">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="g4b-j5-sxT" kind="show" id="bgy-Vo-6P6"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -149,7 +169,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overlay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-ZK-K2i">
                                     <rect key="frame" x="122" y="62.5" width="62" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -169,7 +189,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2468" y="395"/>
+            <point key="canvasLocation" x="576" y="1595"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jhD-yD-sgs">
@@ -288,7 +308,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overlay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wz7-7l-VTZ">
                                     <rect key="frame" x="122" y="62.5" width="62" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -308,7 +328,57 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2468" y="1110"/>
+            <point key="canvasLocation" x="1429" y="1595"/>
+        </scene>
+        <!--Custom Overlay Search View Controller-->
+        <scene sceneID="k54-mQ-tqb">
+            <objects>
+                <tableViewController id="g4b-j5-sxT" customClass="CustomOverlaySearchViewController" customModule="Overlays_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vn9-xU-fqz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="g4b-j5-sxT" id="LMW-7k-fUW"/>
+                            <outlet property="delegate" destination="g4b-j5-sxT" id="WGv-MW-GEm"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="overlay" destination="vl6-Iw-vTn" id="IuP-c6-adg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1d-g4-QbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="vl6-Iw-vTn" customClass="CustomOverlay" customModule="Overlays_Example" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="316" height="156"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-pF-rqv">
+                            <rect key="frame" x="5" y="5" width="306" height="146"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overlay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZQ-NQ-KpP">
+                                    <rect key="frame" x="122" y="62.5" width="62" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="YZQ-NQ-KpP" firstAttribute="centerX" secondItem="UbG-pF-rqv" secondAttribute="centerX" id="0EQ-94-14A"/>
+                                <constraint firstItem="YZQ-NQ-KpP" firstAttribute="centerY" secondItem="UbG-pF-rqv" secondAttribute="centerY" id="Jc4-yG-zyl"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="UbG-pF-rqv" firstAttribute="leading" secondItem="vl6-Iw-vTn" secondAttribute="leading" constant="5" id="FEV-uW-6bx"/>
+                        <constraint firstAttribute="bottom" secondItem="UbG-pF-rqv" secondAttribute="bottom" constant="5" id="YyQ-v9-Q2e"/>
+                        <constraint firstItem="UbG-pF-rqv" firstAttribute="top" secondItem="vl6-Iw-vTn" secondAttribute="top" constant="5" id="fc2-Sq-XdL"/>
+                        <constraint firstAttribute="trailing" secondItem="UbG-pF-rqv" secondAttribute="trailing" constant="5" id="oSt-bG-pn5"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="2376" y="1595"/>
         </scene>
     </scenes>
 </document>
