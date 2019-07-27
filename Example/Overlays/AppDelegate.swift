@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Overlays
+//  KeyboardAwareOverlays
 //
 //  Created by Evgeniy Safronov on 07/26/2019.
 //  Copyright (c) 2019 Evgeniy Safronov. All rights reserved.

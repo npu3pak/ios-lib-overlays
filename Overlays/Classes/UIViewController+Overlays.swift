@@ -5,13 +5,10 @@ public extension UIViewController {
     /**
      Displays the overlay inside the view controller.
      - Parameter overlay: the overlay view to display.
-     - Parameter keyboardHeight: height of the keyboard. Specify this parameter if you want to display the overlay above the keyboard.
      */
-    func showOverlay(_ overlay: OverlayView, keyboardHeight: CGFloat = 0) {
+    func showOverlay(_ overlay: OverlayView) {
         hideOverlay()
-
         overlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        let bottomIndent = keyboardHeight > 0 ? keyboardHeight : bottomLayoutGuide.length
 
         if let tableVC = self as? UITableViewController {
             let tableView = tableVC.tableView!
@@ -21,7 +18,7 @@ public extension UIViewController {
                 x: 0,
                 y: 0,
                 width: tableView.frame.width,
-                height: tableView.frame.height - topLayoutGuide.length - bottomIndent
+                height: tableView.frame.height - topLayoutGuide.length - bottomLayoutGuide.length
             )
             // The overlay should not scroll with the table view.
             tableView.isScrollEnabled = false
@@ -31,19 +28,16 @@ public extension UIViewController {
                 x: 0,
                 y: topLayoutGuide.length,
                 width: view.bounds.width,
-                height: view.bounds.height - topLayoutGuide.length - bottomIndent
+                height: view.bounds.height - topLayoutGuide.length - bottomLayoutGuide.length
             )
             view.addSubview(overlay)
         }
     }
 
     /**
-     Call this method to update the frame of the overlay after layout changes.
-     - Parameter keyboardHeight: height of the keyboard. Specify this parameter if you want to display the overlay above the keyboard.
+     Call this method to update the frame of the overlay after layout changes..
     */
-    func updateOverlayFrame(keyboardHeight: CGFloat = 0) {
-        let bottomIndent = keyboardHeight > 0 ? keyboardHeight : bottomLayoutGuide.length
-
+    func updateOverlayFrame() {
         if let tableVC = self as? UITableViewController {
             let tableView = tableVC.tableView!
             tableVC.tableView.subviews
@@ -53,7 +47,7 @@ public extension UIViewController {
                         x: 0,
                         y: 0,
                         width: tableView.frame.width,
-                        height: tableView.frame.height - topLayoutGuide.length - bottomIndent
+                        height: tableView.frame.height - topLayoutGuide.length - bottomLayoutGuide.length
                     )})
         } else {
             view.subviews
@@ -63,7 +57,7 @@ public extension UIViewController {
                         x: 0,
                         y: topLayoutGuide.length,
                         width: view.bounds.width,
-                        height: view.bounds.height - topLayoutGuide.length - bottomIndent
+                        height: view.bounds.height - topLayoutGuide.length - bottomLayoutGuide.length
                     )})
         }
     }

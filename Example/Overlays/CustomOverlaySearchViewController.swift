@@ -1,11 +1,3 @@
-//
-//  CustomOverlaySearchViewController.swift
-//  Overlays_Example
-//
-//  Created by Евгений Сафронов on 26/07/2019.
-//  Copyright © 2019 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Overlays
 
@@ -13,8 +5,9 @@ class CustomOverlaySearchViewController: UITableViewController, UISearchResultsU
 
     @IBOutlet var overlay: CustomOverlay!
 
+    private lazy var keyboardAwareOverlays = KeyboardAwareOverlays(controller: self)
+
     private let searchController = UISearchController(searchResultsController: nil)
-    private var keyboardHeight: CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,24 +28,12 @@ class CustomOverlaySearchViewController: UITableViewController, UISearchResultsU
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        keyboardAwareOverlays.startListeningKeyboardEvents()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
-    }
-
-    @objc func keyboardWillShow(notification: NSNotification) {
-        let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
-        keyboardHeight = keyboardFrame.cgRectValue.height
-        updateOverlayFrame(keyboardHeight: keyboardHeight)
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        keyboardHeight = 0
-        updateOverlayFrame(keyboardHeight: keyboardHeight)
+        keyboardAwareOverlays.stopListeningKeyboardEvents()
     }
 
     // MARK: - UISearchResultsUpdating
@@ -60,9 +41,9 @@ class CustomOverlaySearchViewController: UITableViewController, UISearchResultsU
     func updateSearchResults(for searchController: UISearchController) {
         guard !searchController.isBeingDismissed && !searchController.isBeingPresented else { return }
 
-        showOverlay(overlay, keyboardHeight: keyboardHeight)
+        keyboardAwareOverlays.show(overlay)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.hideOverlay()
+            self.keyboardAwareOverlays.hide()
         }
     }
 }
