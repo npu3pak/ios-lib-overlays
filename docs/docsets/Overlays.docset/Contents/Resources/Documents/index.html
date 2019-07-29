@@ -61,23 +61,103 @@
             
             <h1 id='overlays' class='heading'>Overlays</h1>
 
-<p><a href="https://travis-ci.org/Evgeniy%20Safronov/Overlays"><img src="https://img.shields.io/travis/Evgeniy%20Safronov/Overlays.svg?style=flat" alt="CI Status"></a>
-<a href="https://cocoapods.org/pods/Overlays"><img src="https://img.shields.io/cocoapods/v/Overlays.svg?style=flat" alt="Version"></a>
+<p><a href="https://cocoapods.org/pods/Overlays"><img src="https://img.shields.io/cocoapods/v/Overlays.svg?style=flat" alt="Version"></a>
 <a href="https://cocoapods.org/pods/Overlays"><img src="https://img.shields.io/cocoapods/l/Overlays.svg?style=flat" alt="License"></a>
 <a href="https://cocoapods.org/pods/Overlays"><img src="https://img.shields.io/cocoapods/p/Overlays.svg?style=flat" alt="Platform"></a></p>
-<h2 id='example' class='heading'>Example</h2>
 
-<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<p><a href="https://npu3pak.github.io/ios-lib-overlays/index.html">Complete API reference</a></p>
+
+<p>A library for displaying an empty list message or a loading indicator. You can show any custom view atop of a view controller content.</p>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/Overview.gif" alt="Overview image"></p>
 <h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 9+</li>
+<li>Swift 5</li>
+<li>XCode 10.3+</li>
+</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>Overlays is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Overlays'</span>
 </code></pre>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h3 id='prepare-overlay-view' class='heading'>Prepare overlay view</h3>
+
+<p>Create a custom class for the overlay view. Implement the OverlayView protocol.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+
+<span class="kd">class</span> <span class="kt">CustomOverlay</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt">OverlayView</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='displaying-inside-a-view-controller' class='heading'>Displaying inside a View Controller</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+
+<span class="kd">class</span> <span class="kt">CustomOverlayViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">overlay</span><span class="p">:</span> <span class="kt">CustomOverlay</span><span class="o">!</span>
+
+    <span class="kd">func</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">showOverlay</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">hideOverlay</span><span class="p">()</span>
+    <span class="p">}</span>
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif" alt="Example image"></p>
+<h3 id='displaying-atop-of-a-view' class='heading'>Displaying atop of a View</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+<span class="o">...</span>
+<span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">overlay</span><span class="p">:</span> <span class="kt">CustomOverlay</span><span class="o">!</span>
+<span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">containerView</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">!</span>
+
+<span class="kd">func</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">containerView</span><span class="o">.</span><span class="nf">showOverlay</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">containerView</span><span class="o">.</span><span class="nf">hideOverlay</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif" alt="Example image"></p>
+<h3 id='displaying-above-the-keyboard' class='heading'>Displaying above the keyboard</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+
+<span class="kd">class</span> <span class="kt">CustomOverlayViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">overlay</span><span class="p">:</span> <span class="kt">CustomOverlay</span><span class="o">!</span>
+
+    <span class="kd">private</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">keyboardAwareOverlays</span> <span class="o">=</span> <span class="kt">KeyboardAwareOverlays</span><span class="p">(</span><span class="nv">controller</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="n">keyboardAwareOverlays</span><span class="o">.</span><span class="nf">startListeningKeyboardEvents</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="n">keyboardAwareOverlays</span><span class="o">.</span><span class="nf">stopListeningKeyboardEvents</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">keyboardAwareOverlays</span><span class="o">.</span><span class="nf">showOverlay</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">keyboardAwareOverlays</span><span class="o">.</span><span class="nf">hideOverlay</span><span class="p">()</span>
+    <span class="p">}</span>
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/AboveKeyboard.gif" alt="Example image"></p>
 <h2 id='author' class='heading'>Author</h2>
 
-<p>Evgeniy Safronov, <a href="mailto:evsafronov.personal@yandex.ru">evsafronov.personal@yandex.ru</a></p>
+<p>Evgeniy Safronov, <a href="mailto:evsafronov.personal@yandex.ru">evsafronov.personal@yandex.ru</a>, <a href="https://ios-dev.ru">https://ios-dev.ru</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>Overlays is available under the MIT license. See the LICENSE file for more info.</p>
