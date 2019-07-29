@@ -1,16 +1,23 @@
 PODS:
+  - MBProgressHUD (1.1.0)
   - Overlays (0.1.0)
 
 DEPENDENCIES:
+  - MBProgressHUD (= 1.1.0)
   - Overlays (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
 
 EXTERNAL SOURCES:
   Overlays:
     :path: "../"
 
 SPEC CHECKSUMS:
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Overlays: 9130163af27c215ed0ef88ff9763e668f1e2f553
 
-PODFILE CHECKSUM: 62444f9c5f89c281134801051c9fb89c2022086a
+PODFILE CHECKSUM: e91150508a76ecece532fda89e6849fa3b5da874
 
 COCOAPODS: 1.7.2

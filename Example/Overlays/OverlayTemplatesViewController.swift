@@ -8,20 +8,40 @@
 
 import UIKit
 import Overlays
+import MBProgressHUD
 
 class OverlayTemplatesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        showEmpty()
+    }
+
+    // An OverlayTemplate usage example.
+    func showEmpty() {
         let overlay = OverlayTemplate(alignment: .center)
         overlay.addImage(named: "Empty")
         overlay.addSeparator(30)
-        overlay.addHeadline("We are empty :(")
+        overlay.addHeadline("No results :(")
         overlay.addSeparator(8)
-        overlay.addSubhead("Dear user. Try to reload us to see what we can do for you.")
+        overlay.addSubhead("Please try again later.")
         overlay.addSeparator(20)
-        overlay.addButton("Reload", listener: { print("reload") })
+        overlay.addButton("Retry", listener: { [unowned self] in self.reload() })
         showOverlay(overlay)
+    }
+
+    // The MBProgressHUD library usage example.
+    func reload() {
+        let hudContainer = UIView()
+        MBProgressHUD.showAdded(to: hudContainer, animated: true)
+
+        let overlay = OverlayTemplate(alignment: .center)
+        overlay.addView(hudContainer)
+        showOverlay(overlay)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showEmpty()
+        }
     }
 }
