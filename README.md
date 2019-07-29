@@ -24,7 +24,9 @@ it, simply add the following line to your Podfile:
 pod 'Overlays'
 ```
 
-## Usage
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### Prepare overlay view
 
@@ -37,9 +39,7 @@ class CustomOverlay: UIView, OverlayView {
 }
 ```
 
-### Inside a View Controller
-
-![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
+### Displaying inside a View Controller
 
 ```swift
 import Overlays
@@ -56,9 +56,9 @@ class CustomOverlayViewController: UIViewController {
     }
 ```
 
-### Atop of a View
-
 ![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
+
+### Displaying atop of a View
 
 ```swift
 import Overlays
@@ -76,9 +76,9 @@ func hide() {
 ...
 ```
 
-### Above the keyboard
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
 
-![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/AboveKeyboard.gif)
+### Displaying above the keyboard
 
 ```swift
 import Overlays
@@ -107,9 +107,7 @@ class CustomOverlayViewController: UIViewController {
     }
 ```
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/AboveKeyboard.gif)
 
 ## Author
 
