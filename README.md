@@ -1,15 +1,17 @@
 # Overlays
 
-[![CI Status](https://img.shields.io/travis/Evgeniy Safronov/Overlays.svg?style=flat)](https://travis-ci.org/Evgeniy Safronov/Overlays)
 [![Version](https://img.shields.io/cocoapods/v/Overlays.svg?style=flat)](https://cocoapods.org/pods/Overlays)
 [![License](https://img.shields.io/cocoapods/l/Overlays.svg?style=flat)](https://cocoapods.org/pods/Overlays)
 [![Platform](https://img.shields.io/cocoapods/p/Overlays.svg?style=flat)](https://cocoapods.org/pods/Overlays)
 
-## Example
+[Complete API reference](https://npu3pak.github.io/ios-lib-overlays/index.html)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Library for displaying an empty list message or a loading indicator. You can show any custom view atop of a view controller content.
 
 ## Requirements
+- iOS 9+
+- Swift 5
+- XCode 10.3+
 
 ## Installation
 
@@ -19,6 +21,18 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Overlays'
 ```
+
+## Usage
+
+### Inside a View Controller
+
+### Atop of a View
+
+### Above the keyboard
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
