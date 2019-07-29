@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0B3F15757FAFCD898930B41BC86E847C /* Pods-Overlays_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AB1690BF586C2D3F95F78D00A2EB4C /* Pods-Overlays_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3900900C33324984764959350A7FFCD8 /* UIView+Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE639106083F20549835148D5054021 /* UIView+Overlays.swift */; };
+		12FA3587318B3FB01C3F9C1B6CFCBB7A /* Overlays-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FFE0B0C6F862DBD2CDC58D56E178CF7 /* Overlays-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		164095E1A8F4EBAE6AA699D529809027 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4704C99FD7296751678558674C3DA426 /* OverlayView.swift */; };
+		1E77CF54131B77CBAF961A33FF4706B6 /* OverlayTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537E71B5D14CFC42FEE5FB29090666D /* OverlayTemplate.swift */; };
+		34529B7FBDC508AAAFEFE60B723AA1EE /* UIView+Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7794889F4419FDE80B904FC7AAA18C18 /* UIView+Overlays.swift */; };
 		44ED50BA9CC12E9D945E75ADEF205BC2 /* Pods-Overlays_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1528633477889E5ADD0CDB7D6A78DD72 /* Pods-Overlays_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		517EB9EE502B70A11E8A96950BE62A08 /* Pods-Overlays_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C657D7D5926E6C6F613C0193323CC39F /* Pods-Overlays_Example-dummy.m */; };
 		5ACEE772D16EFE2BCD9BC7D755A703C2 /* Pods-Overlays_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B53969501F15AB40274AF41A1BA418E /* Pods-Overlays_Tests-dummy.m */; };
 		6136ADAD6A7B83259EE2128370C4BD1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		90E91E14B6789A7AF22EE0F5FDF904D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		A9D33BEE5EBD680311FEEDF49A39604D /* UIViewController+Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8D5F5B4E6BFE73C32F5C9F3951AD8 /* UIViewController+Overlays.swift */; };
-		AB49BA05FC79AFEA6C88AEBC94E5F166 /* KeyboardAwareOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF05F0975CF4A168E88F78DA5B52335 /* KeyboardAwareOverlays.swift */; };
-		CB56CEC93522F0CA7305E0A7B4C76954 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D57753EAA10D2A63FB2503A2605E11 /* OverlayView.swift */; };
-		E7C4CF531FDF82853433E284D7247BB0 /* Overlays-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC3BE2DB65155D019884C298918327A /* Overlays-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8875A4FAD7AAB67A8027D57007950C0 /* Overlays-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7462A43EB29CC3361BC6DFA7BBD1C8E6 /* Overlays-dummy.m */; };
+		8C6CFAB2CF3F8E29C98BC93DF3F70D5E /* KeyboardAwareOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A6996294F499FE83EAABE863FFFB5 /* KeyboardAwareOverlays.swift */; };
+		AEB1D37B1377238E6F09ECE2167074BD /* UIViewController+Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF626775CFC49E0A1CFDF5CFC30AE1D /* UIViewController+Overlays.swift */; };
+		C22143EC3F2E2C8B4F8AD9F3049D7F91 /* Overlays-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 195491BF3178B3109173EB8544792784 /* Overlays-dummy.m */; };
+		C559013A630297E4A2661CD3E46F7A61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FCDDDD57CE3427E55CE0D64A2FDC9424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,84 +41,85 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E0C5BBB426323DB40EE9E176D56089 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
 		03AB1690BF586C2D3F95F78D00A2EB4C /* Pods-Overlays_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Overlays_Example-umbrella.h"; sourceTree = "<group>"; };
-		077ADA378293F468CA252020DC981506 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		08093EF815F2366EE4B0709D2F39643D /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
-		091E533F8670A9370C1A71C82E9ED9EA /* Overlays-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Overlays-Info.plist"; sourceTree = "<group>"; };
-		0A416BE96D09D60A2CE8DB688958A1A5 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		0FACAE0D006F1E9199C4F1FF4328A17D /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		0AFEF849BD548727F57D2B3A1B063053 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		0C2A58FD5E066BF02F73BBD731D86BEE /* Overlays.tgz */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = Overlays.tgz; path = docs/docsets/Overlays.tgz; sourceTree = "<group>"; };
+		0DFA9AFC448B139B7FDAAE0C2B6035CE /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		0FCFBD65912D6DA05291EC1BD9A564CE /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
+		0FF6A77174E69A68DE851F652F4FB2FC /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		108DC504159D6157FA6FB0693273BBD3 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Protocols.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
 		133978DE4CA2C5B93E6801F23A85D91B /* Pods-Overlays_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overlays_Tests-Info.plist"; sourceTree = "<group>"; };
 		1528633477889E5ADD0CDB7D6A78DD72 /* Pods-Overlays_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Overlays_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1706AE083DFAFF336DABCED73D543B30 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/Overlays.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		1DC3BE2DB65155D019884C298918327A /* Overlays-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Overlays-umbrella.h"; sourceTree = "<group>"; };
-		1E5E4F9563883B2FEB48CDA8E864E273 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		1EC9DE2B81BE949C1915D0EB419CD617 /* Overlays.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Overlays.modulemap; sourceTree = "<group>"; };
-		226672B72CCE8DBD6BF87C47286E3D46 /* Overlays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Overlays.framework; path = Overlays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18854A6B8C53B10A741B683F2A1A8EDD /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		195491BF3178B3109173EB8544792784 /* Overlays-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Overlays-dummy.m"; sourceTree = "<group>"; };
+		226672B72CCE8DBD6BF87C47286E3D46 /* Overlays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overlays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EE80ABD7AD5B1EB8F31FA1738636E2 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
+		29FFF99A23F94EC51955D50E9085A06E /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = docSet.dsidx; path = docs/docsets/Overlays.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		2BF626775CFC49E0A1CFDF5CFC30AE1D /* UIViewController+Overlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Overlays.swift"; path = "Overlays/Classes/UIViewController+Overlays.swift"; sourceTree = "<group>"; };
+		2CC5442E7274B29DD2BA97BACF24CF20 /* Overlays.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Overlays.modulemap; sourceTree = "<group>"; };
 		2D64DD6709FF20BDFBA9621152A1587A /* Pods-Overlays_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overlays_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		35AD742B82B23A15FB0B2EFB035BB2C0 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
-		3786A80C0E02AF3F84B425F9A05AA0BB /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		3537E71B5D14CFC42FEE5FB29090666D /* OverlayTemplate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayTemplate.swift; path = Overlays/Classes/OverlayTemplate.swift; sourceTree = "<group>"; };
+		377D45CA1733F9A9D4546F82FB20F1F0 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
 		39EEF4AD279C06D80A07EE74D70E5439 /* Pods-Overlays_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Overlays_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3A1CBA895386CDA81FD761C71E963626 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		3C9AE7164A88C29AD786FD3D37B036C3 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIViewController.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions/UIViewController.html; sourceTree = "<group>"; };
+		3B4A6996294F499FE83EAABE863FFFB5 /* KeyboardAwareOverlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAwareOverlays.swift; path = Overlays/Classes/KeyboardAwareOverlays.swift; sourceTree = "<group>"; };
 		4047A5ED7D47BE5177110D9D92918CFC /* Pods-Overlays_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Overlays_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4432CEA59BADAEBA6A5947A5FF0A7966 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		4B4DC074A74C6E7A7916BF9DC1044565 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		41A2E728AE096D1032CE3142C2064476 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIViewController.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions/UIViewController.html; sourceTree = "<group>"; };
+		461DC12439E3B5C7431EB67CA2397BC7 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIView.html; path = docs/Extensions/UIView.html; sourceTree = "<group>"; };
+		463C3CC6D186269B1EAB0BE2BAE23B57 /* Overlays.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Overlays.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4641241A0EC17EBB2167743F5DDF924C /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Classes.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		4704C99FD7296751678558674C3DA426 /* OverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = Overlays/Classes/OverlayView.swift; sourceTree = "<group>"; };
+		482BB1EB6883FFA32800B44F5696F18B /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		4E914677BD82593DB73992156EB20CB6 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		53C4B262F1170451C203B272328811E9 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		57CD2AFF65A0CF758FEF0585B7BD037E /* Overlays.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Overlays.xcconfig; sourceTree = "<group>"; };
+		580F89D16C827FA8DBD983884995026F /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
 		593D1BC624B3555F114910D87D01FE4C /* Pods-Overlays_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Overlays_Example.modulemap"; sourceTree = "<group>"; };
-		5CFDD840D79769CB62AA170E350D02B7 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
-		6152CD4BD62DD065059D185175CD77E9 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIView.html; path = docs/Extensions/UIView.html; sourceTree = "<group>"; };
+		59C4A12B691E8F4FD29FA1BA0349AC3B /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		5DFE0CCA8B4F6DEFA0A8D96B5D2CDE4F /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIViewController.html; path = docs/Extensions/UIViewController.html; sourceTree = "<group>"; };
+		5FFE0B0C6F862DBD2CDC58D56E178CF7 /* Overlays-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Overlays-umbrella.h"; sourceTree = "<group>"; };
+		65DCE427DD0CC9165F55D4566E92DAD4 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		717CB938738ABFBF591525ED3A705CC7 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
+		73054EFFD3CD5DFDD4BDD420315A4B04 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
 		73E45F2048010E8F90AE15092E722196 /* Pods-Overlays_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overlays_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7462A43EB29CC3361BC6DFA7BBD1C8E6 /* Overlays-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Overlays-dummy.m"; sourceTree = "<group>"; };
-		772D2A10010D6189BEE9112C3A0A3D38 /* KeyboardAwareOverlays.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeyboardAwareOverlays.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Classes/KeyboardAwareOverlays.html; sourceTree = "<group>"; };
+		7794889F4419FDE80B904FC7AAA18C18 /* UIView+Overlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Overlays.swift"; path = "Overlays/Classes/UIView+Overlays.swift"; sourceTree = "<group>"; };
 		77B7C4593A359B4CF8E0564883E3B2E8 /* Pods-Overlays_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overlays_Example-Info.plist"; sourceTree = "<group>"; };
-		7CE639106083F20549835148D5054021 /* UIView+Overlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Overlays.swift"; path = "Overlays/Classes/UIView+Overlays.swift"; sourceTree = "<group>"; };
-		7D937DC655D0CEB28537F6BACB9ABF4C /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
-		7E9C9ADB65F43AA5169398F3170B1845 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
-		83364E459E8670C21A85BE8B19754144 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
-		8ABDE7FA068B797993C4AC08AA3091F6 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
+		8351B5594A9C0B4E7730E1C5ECBCE03C /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		85E69B5845FAC41B9B6D4191EE1A3916 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		899C3DC866753442A9DA2D7ECA14499D /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
 		8B53969501F15AB40274AF41A1BA418E /* Pods-Overlays_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Overlays_Tests-dummy.m"; sourceTree = "<group>"; };
+		8D34C3B0B4EDA0E5969A7FDC9B7CDD52 /* KeyboardAwareOverlays.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = KeyboardAwareOverlays.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Classes/KeyboardAwareOverlays.html; sourceTree = "<group>"; };
 		8D6C62D150C382D17343304DE3B1F7A8 /* Pods-Overlays_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Overlays_Tests.modulemap"; sourceTree = "<group>"; };
-		91EA0DAEDB60B47A4B5AE4EB08F2E283 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
-		929A4415ECA3D7DF384F2B8C6BC3FFDD /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/Overlays.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
-		93BA1D7CA3B7A2ECF0AC7ED478C9E9CB /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2164E0594AB97A885E81E860D114C72 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
-		A350AB74FEFF8206A042D98C9AD80ACE /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIView.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions/UIView.html; sourceTree = "<group>"; };
-		B3224F865194095519A0E67F67A90DF2 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
-		B6C7E3527446915F17DC7BA919E7332F /* Pods_Overlays_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Overlays_Tests.framework; path = "Pods-Overlays_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAF23233794AFF38A6C5630BC2B88B54 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		99181033C7DFB92D57D131B0AB9831E5 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2288CE08EFE16DF4E44039C830FADE0 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		A637390DD7674168A3D74CD1A0B1EEB2 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIView.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions/UIView.html; sourceTree = "<group>"; };
+		B235564FCFD63457366A89C729677658 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
+		B6C7E3527446915F17DC7BA919E7332F /* Pods_Overlays_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overlays_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4323C75FFD99C09CCA2045B1FCB1E4 /* Pods-Overlays_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overlays_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BD5379045193283DB9D55410BE1772DE /* Overlays-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Overlays-prefix.pch"; sourceTree = "<group>"; };
-		BDFD323A902AEC9FA7EA9D229BB165CA /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
-		BEFCB26D7C6787BD6947CB2A78BE1B7E /* Overlays.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = Overlays.tgz; path = docs/docsets/Overlays.tgz; sourceTree = "<group>"; };
-		BFF75F89D7686E6CBD0C0C51E441D7AD /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIViewController.html; path = docs/Extensions/UIViewController.html; sourceTree = "<group>"; };
 		C657D7D5926E6C6F613C0193323CC39F /* Pods-Overlays_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Overlays_Example-dummy.m"; sourceTree = "<group>"; };
 		C898F2D9931C244F6AA01790D5A60F46 /* Pods-Overlays_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Overlays_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CCECB0E7C0382205B9DAB468666D2956 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		CD0D315D456EC9E1232ED740A02C0A06 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
-		CEDD52AFBCAE279546346B5E519344AA /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
-		CEF25360012E1007F09904A93E0689D2 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
-		D9034CFC9A3B61001F649EE0B9836C1B /* KeyboardAwareOverlays.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeyboardAwareOverlays.html; path = docs/Classes/KeyboardAwareOverlays.html; sourceTree = "<group>"; };
-		E390084CCDF74BE7382DEAE53DAAA1BA /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
-		E3D57753EAA10D2A63FB2503A2605E11 /* OverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = Overlays/Classes/OverlayView.swift; sourceTree = "<group>"; };
-		E68F5FA42442927B832B66EDA3E34F9B /* Overlays.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Overlays.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D4B7E84B71CC3F185C03E91DA9485F99 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Extensions.html; path = docs/docsets/Overlays.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
+		D6380976E2CEAA42662E303ABE8840E7 /* Overlays-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Overlays-Info.plist"; sourceTree = "<group>"; };
+		D788533A1DCBA59D561B85D73C30E986 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA9559C664F276F60CADEE10DE980980 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E55DDAC8F481EDF1FC5CA8951235A583 /* KeyboardAwareOverlays.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = KeyboardAwareOverlays.html; path = docs/Classes/KeyboardAwareOverlays.html; sourceTree = "<group>"; };
+		E680E9F701DD6A758DFD45D623DAB30C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/Overlays.docset/Contents/Info.plist; sourceTree = "<group>"; };
 		E779D973A15BFB0E61C3033EE5D4B670 /* Pods-Overlays_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overlays_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		ED7D49D882AE5743C2EF4C46E5D8627D /* Overlays.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Overlays.xcconfig; sourceTree = "<group>"; };
-		EDBAC27ACD5C5B1C83A111058BC70142 /* Pods_Overlays_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Overlays_Example.framework; path = "Pods-Overlays_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFF05F0975CF4A168E88F78DA5B52335 /* KeyboardAwareOverlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAwareOverlays.swift; path = Overlays/Classes/KeyboardAwareOverlays.swift; sourceTree = "<group>"; };
+		EDBAC27ACD5C5B1C83A111058BC70142 /* Pods_Overlays_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overlays_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF13910EAD06C9B665F3EA6B209C252C /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
 		F28C9EED30C3FB52F7F9F747E21B9211 /* Pods-Overlays_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Overlays_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F2BC4955A74F59507B1C33157A696EF5 /* Overlays-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Overlays-prefix.pch"; sourceTree = "<group>"; };
 		F49924006F00CE8AE72CFA7FE7C3EEA4 /* Pods-Overlays_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Overlays_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F6931F97CF19A3667C43A4542D7933B7 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
-		FAA8D5F5B4E6BFE73C32F5C9F3951AD8 /* UIViewController+Overlays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Overlays.swift"; path = "Overlays/Classes/UIViewController+Overlays.swift"; sourceTree = "<group>"; };
+		FE0089DE4E1DA3DD7BB160E63DE867E8 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CA8DAF0F4461768E5E351CEB3B0E6D2 /* Frameworks */ = {
+		0B2312AC51D57AEFD9F07120B1E4931C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90E91E14B6789A7AF22EE0F5FDF904D6 /* Foundation.framework in Frameworks */,
+				C559013A630297E4A2661CD3E46F7A61 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,14 @@
 				B6C7E3527446915F17DC7BA919E7332F /* Pods_Overlays_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBD939AF0849DDCE6FEAED56D6E3799 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62E4606D9A72572B3B674B07955A4A93 /* Overlays */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		47697968D5DDAEC88D101D743FBF7051 /* Pods-Overlays_Example */ = {
@@ -183,40 +193,64 @@
 			path = "Target Support Files/Pods-Overlays_Tests";
 			sourceTree = "<group>";
 		};
-		77FB2BA2A408BDC89B86AA37BB84EC41 /* Development Pods */ = {
+		62E4606D9A72572B3B674B07955A4A93 /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				AD7C5E60DCB253D53C056D3DA73D27EB /* Overlays */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		94E9C16AC9715C2B4A035E5350F1FEDF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1EC9DE2B81BE949C1915D0EB419CD617 /* Overlays.modulemap */,
-				ED7D49D882AE5743C2EF4C46E5D8627D /* Overlays.xcconfig */,
-				7462A43EB29CC3361BC6DFA7BBD1C8E6 /* Overlays-dummy.m */,
-				091E533F8670A9370C1A71C82E9ED9EA /* Overlays-Info.plist */,
-				BD5379045193283DB9D55410BE1772DE /* Overlays-prefix.pch */,
-				1DC3BE2DB65155D019884C298918327A /* Overlays-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Overlays";
-			sourceTree = "<group>";
-		};
-		AD7C5E60DCB253D53C056D3DA73D27EB /* Overlays */ = {
-			isa = PBXGroup;
-			children = (
-				EFF05F0975CF4A168E88F78DA5B52335 /* KeyboardAwareOverlays.swift */,
-				E3D57753EAA10D2A63FB2503A2605E11 /* OverlayView.swift */,
-				7CE639106083F20549835148D5054021 /* UIView+Overlays.swift */,
-				FAA8D5F5B4E6BFE73C32F5C9F3951AD8 /* UIViewController+Overlays.swift */,
-				EA74EE848ED060F977071CCDED21BC60 /* Pod */,
-				94E9C16AC9715C2B4A035E5350F1FEDF /* Support Files */,
+				3B4A6996294F499FE83EAABE863FFFB5 /* KeyboardAwareOverlays.swift */,
+				3537E71B5D14CFC42FEE5FB29090666D /* OverlayTemplate.swift */,
+				4704C99FD7296751678558674C3DA426 /* OverlayView.swift */,
+				7794889F4419FDE80B904FC7AAA18C18 /* UIView+Overlays.swift */,
+				2BF626775CFC49E0A1CFDF5CFC30AE1D /* UIViewController+Overlays.swift */,
+				67151C2A5E72165AD5D135B442162447 /* Pod */,
+				F0135F115241344EF49E8C94BCFA23FC /* Support Files */,
 			);
 			name = Overlays;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		67151C2A5E72165AD5D135B442162447 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0AFEF849BD548727F57D2B3A1B063053 /* badge.svg */,
+				4E914677BD82593DB73992156EB20CB6 /* carat.png */,
+				482BB1EB6883FFA32800B44F5696F18B /* carat.png */,
+				4641241A0EC17EBB2167743F5DDF924C /* Classes.html */,
+				899C3DC866753442A9DA2D7ECA14499D /* Classes.html */,
+				EF13910EAD06C9B665F3EA6B209C252C /* dash.png */,
+				8351B5594A9C0B4E7730E1C5ECBCE03C /* dash.png */,
+				29FFF99A23F94EC51955D50E9085A06E /* docSet.dsidx */,
+				B235564FCFD63457366A89C729677658 /* Extensions.html */,
+				D4B7E84B71CC3F185C03E91DA9485F99 /* Extensions.html */,
+				0DFA9AFC448B139B7FDAAE0C2B6035CE /* gh.png */,
+				18854A6B8C53B10A741B683F2A1A8EDD /* gh.png */,
+				580F89D16C827FA8DBD983884995026F /* highlight.css */,
+				0FF6A77174E69A68DE851F652F4FB2FC /* highlight.css */,
+				59C4A12B691E8F4FD29FA1BA0349AC3B /* index.html */,
+				99181033C7DFB92D57D131B0AB9831E5 /* index.html */,
+				E680E9F701DD6A758DFD45D623DAB30C /* Info.plist */,
+				65DCE427DD0CC9165F55D4566E92DAD4 /* jazzy.css */,
+				73054EFFD3CD5DFDD4BDD420315A4B04 /* jazzy.css */,
+				0FCFBD65912D6DA05291EC1BD9A564CE /* jazzy.js */,
+				85E69B5845FAC41B9B6D4191EE1A3916 /* jazzy.js */,
+				53C4B262F1170451C203B272328811E9 /* jquery.min.js */,
+				A2288CE08EFE16DF4E44039C830FADE0 /* jquery.min.js */,
+				E55DDAC8F481EDF1FC5CA8951235A583 /* KeyboardAwareOverlays.html */,
+				8D34C3B0B4EDA0E5969A7FDC9B7CDD52 /* KeyboardAwareOverlays.html */,
+				DA9559C664F276F60CADEE10DE980980 /* LICENSE */,
+				463C3CC6D186269B1EAB0BE2BAE23B57 /* Overlays.podspec */,
+				0C2A58FD5E066BF02F73BBD731D86BEE /* Overlays.tgz */,
+				717CB938738ABFBF591525ED3A705CC7 /* Protocols.html */,
+				108DC504159D6157FA6FB0693273BBD3 /* Protocols.html */,
+				D788533A1DCBA59D561B85D73C30E986 /* README.md */,
+				22EE80ABD7AD5B1EB8F31FA1738636E2 /* search.json */,
+				377D45CA1733F9A9D4546F82FB20F1F0 /* search.json */,
+				A637390DD7674168A3D74CD1A0B1EEB2 /* UIView.html */,
+				461DC12439E3B5C7431EB67CA2397BC7 /* UIView.html */,
+				5DFE0CCA8B4F6DEFA0A8D96B5D2CDE4F /* UIViewController.html */,
+				41A2E728AE096D1032CE3142C2064476 /* UIViewController.html */,
+				FE0089DE4E1DA3DD7BB160E63DE867E8 /* undocumented.json */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -231,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				77FB2BA2A408BDC89B86AA37BB84EC41 /* Development Pods */,
+				2DBD939AF0849DDCE6FEAED56D6E3799 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				252178600B7723E2D5517CF97362A9D3 /* Products */,
 				D3C0457632D22D08D437C16D8224AEA7 /* Targets Support Files */,
@@ -255,59 +289,28 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EA74EE848ED060F977071CCDED21BC60 /* Pod */ = {
+		F0135F115241344EF49E8C94BCFA23FC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEDD52AFBCAE279546346B5E519344AA /* badge.svg */,
-				3786A80C0E02AF3F84B425F9A05AA0BB /* carat.png */,
-				93BA1D7CA3B7A2ECF0AC7ED478C9E9CB /* carat.png */,
-				5CFDD840D79769CB62AA170E350D02B7 /* Classes.html */,
-				F6931F97CF19A3667C43A4542D7933B7 /* Classes.html */,
-				BDFD323A902AEC9FA7EA9D229BB165CA /* dash.png */,
-				4B4DC074A74C6E7A7916BF9DC1044565 /* dash.png */,
-				929A4415ECA3D7DF384F2B8C6BC3FFDD /* docSet.dsidx */,
-				A2164E0594AB97A885E81E860D114C72 /* Extensions.html */,
-				8ABDE7FA068B797993C4AC08AA3091F6 /* Extensions.html */,
-				35AD742B82B23A15FB0B2EFB035BB2C0 /* gh.png */,
-				0FACAE0D006F1E9199C4F1FF4328A17D /* gh.png */,
-				E390084CCDF74BE7382DEAE53DAAA1BA /* highlight.css */,
-				3A1CBA895386CDA81FD761C71E963626 /* highlight.css */,
-				7E9C9ADB65F43AA5169398F3170B1845 /* index.html */,
-				91EA0DAEDB60B47A4B5AE4EB08F2E283 /* index.html */,
-				1706AE083DFAFF336DABCED73D543B30 /* Info.plist */,
-				08093EF815F2366EE4B0709D2F39643D /* jazzy.css */,
-				1E5E4F9563883B2FEB48CDA8E864E273 /* jazzy.css */,
-				7D937DC655D0CEB28537F6BACB9ABF4C /* jazzy.js */,
-				4432CEA59BADAEBA6A5947A5FF0A7966 /* jazzy.js */,
-				CD0D315D456EC9E1232ED740A02C0A06 /* jquery.min.js */,
-				077ADA378293F468CA252020DC981506 /* jquery.min.js */,
-				D9034CFC9A3B61001F649EE0B9836C1B /* KeyboardAwareOverlays.html */,
-				772D2A10010D6189BEE9112C3A0A3D38 /* KeyboardAwareOverlays.html */,
-				CCECB0E7C0382205B9DAB468666D2956 /* LICENSE */,
-				E68F5FA42442927B832B66EDA3E34F9B /* Overlays.podspec */,
-				BEFCB26D7C6787BD6947CB2A78BE1B7E /* Overlays.tgz */,
-				B3224F865194095519A0E67F67A90DF2 /* Protocols.html */,
-				01E0C5BBB426323DB40EE9E176D56089 /* Protocols.html */,
-				BAF23233794AFF38A6C5630BC2B88B54 /* README.md */,
-				0A416BE96D09D60A2CE8DB688958A1A5 /* search.json */,
-				CEF25360012E1007F09904A93E0689D2 /* search.json */,
-				A350AB74FEFF8206A042D98C9AD80ACE /* UIView.html */,
-				6152CD4BD62DD065059D185175CD77E9 /* UIView.html */,
-				BFF75F89D7686E6CBD0C0C51E441D7AD /* UIViewController.html */,
-				3C9AE7164A88C29AD786FD3D37B036C3 /* UIViewController.html */,
-				83364E459E8670C21A85BE8B19754144 /* undocumented.json */,
+				2CC5442E7274B29DD2BA97BACF24CF20 /* Overlays.modulemap */,
+				57CD2AFF65A0CF758FEF0585B7BD037E /* Overlays.xcconfig */,
+				195491BF3178B3109173EB8544792784 /* Overlays-dummy.m */,
+				D6380976E2CEAA42662E303ABE8840E7 /* Overlays-Info.plist */,
+				F2BC4955A74F59507B1C33157A696EF5 /* Overlays-prefix.pch */,
+				5FFE0B0C6F862DBD2CDC58D56E178CF7 /* Overlays-umbrella.h */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Overlays";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		253FF5D2ECFC37AB5BE44B60919B0F3D /* Headers */ = {
+		7BA16B0297D6D088B2A1FCFD3485C666 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7C4CF531FDF82853433E284D7247BB0 /* Overlays-umbrella.h in Headers */,
+				12FA3587318B3FB01C3F9C1B6CFCBB7A /* Overlays-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +335,12 @@
 /* Begin PBXNativeTarget section */
 		19141C1523CF774345CB7C354C47E622 /* Overlays */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA7CD0AE2330A2083A3D722D5380FBDD /* Build configuration list for PBXNativeTarget "Overlays" */;
+			buildConfigurationList = FC6B4F68FF45EA12BB260C43EE4A6282 /* Build configuration list for PBXNativeTarget "Overlays" */;
 			buildPhases = (
-				253FF5D2ECFC37AB5BE44B60919B0F3D /* Headers */,
-				AC61BABFC6E6A1E1B328D8B4CEFA6630 /* Sources */,
-				0CA8DAF0F4461768E5E351CEB3B0E6D2 /* Frameworks */,
-				94BB6B05B0987A3EE38AF8C987E05924 /* Resources */,
+				7BA16B0297D6D088B2A1FCFD3485C666 /* Headers */,
+				D2B4BA9ED0F1885666B8F1C41DD875D9 /* Sources */,
+				0B2312AC51D57AEFD9F07120B1E4931C /* Frameworks */,
+				6210C3115F6D396D3CB5CDF9D541B105 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -415,14 +418,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8A06B8DB60D00FC0BB97E6C8875F16C5 /* Resources */ = {
+		6210C3115F6D396D3CB5CDF9D541B105 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94BB6B05B0987A3EE38AF8C987E05924 /* Resources */ = {
+		8A06B8DB60D00FC0BB97E6C8875F16C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -439,23 +442,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AC61BABFC6E6A1E1B328D8B4CEFA6630 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB49BA05FC79AFEA6C88AEBC94E5F166 /* KeyboardAwareOverlays.swift in Sources */,
-				F8875A4FAD7AAB67A8027D57007950C0 /* Overlays-dummy.m in Sources */,
-				CB56CEC93522F0CA7305E0A7B4C76954 /* OverlayView.swift in Sources */,
-				3900900C33324984764959350A7FFCD8 /* UIView+Overlays.swift in Sources */,
-				A9D33BEE5EBD680311FEEDF49A39604D /* UIViewController+Overlays.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6F959E91F0C78E8553AD586A6CC890D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5ACEE772D16EFE2BCD9BC7D755A703C2 /* Pods-Overlays_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B4BA9ED0F1885666B8F1C41DD875D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6CFAB2CF3F8E29C98BC93DF3F70D5E /* KeyboardAwareOverlays.swift in Sources */,
+				C22143EC3F2E2C8B4F8AD9F3049D7F91 /* Overlays-dummy.m in Sources */,
+				1E77CF54131B77CBAF961A33FF4706B6 /* OverlayTemplate.swift in Sources */,
+				164095E1A8F4EBAE6AA699D529809027 /* OverlayView.swift in Sources */,
+				34529B7FBDC508AAAFEFE60B723AA1EE /* UIView+Overlays.swift in Sources */,
+				AEB1D37B1377238E6F09ECE2167074BD /* UIViewController+Overlays.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,8 +609,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -710,9 +713,9 @@
 			};
 			name = Release;
 		};
-		B93FB5C782F8FA08407B49F38B06E99E /* Debug */ = {
+		B29B30A02F705EBA20CACD4544F7F869 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED7D49D882AE5743C2EF4C46E5D8627D /* Overlays.xcconfig */;
+			baseConfigurationReference = 57CD2AFF65A0CF758FEF0585B7BD037E /* Overlays.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -726,7 +729,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Overlays/Overlays-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Overlays/Overlays-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Overlays/Overlays.modulemap";
 				PRODUCT_MODULE_NAME = Overlays;
@@ -774,9 +777,9 @@
 			};
 			name = Debug;
 		};
-		F55D098AABEEC549657CEDC24867DAFE /* Release */ = {
+		CEED6A7A84C0F69A5C2150C1B445F7EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED7D49D882AE5743C2EF4C46E5D8627D /* Overlays.xcconfig */;
+			baseConfigurationReference = 57CD2AFF65A0CF758FEF0585B7BD037E /* Overlays.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -790,7 +793,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Overlays/Overlays-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Overlays/Overlays-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Overlays/Overlays.modulemap";
 				PRODUCT_MODULE_NAME = Overlays;
@@ -818,15 +821,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA7CD0AE2330A2083A3D722D5380FBDD /* Build configuration list for PBXNativeTarget "Overlays" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B93FB5C782F8FA08407B49F38B06E99E /* Debug */,
-				F55D098AABEEC549657CEDC24867DAFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D3BCA802073DE486BC05FDD45684081F /* Build configuration list for PBXNativeTarget "Pods-Overlays_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -841,6 +835,15 @@
 			buildConfigurations = (
 				739F5BBF695ADCCDDEAB66D2A7D9B326 /* Debug */,
 				8728696733E89134068587EC8CEBEF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6B4F68FF45EA12BB260C43EE4A6282 /* Build configuration list for PBXNativeTarget "Overlays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29B30A02F705EBA20CACD4544F7F869 /* Debug */,
+				CEED6A7A84C0F69A5C2150C1B445F7EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
