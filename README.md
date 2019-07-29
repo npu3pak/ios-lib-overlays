@@ -6,7 +6,9 @@
 
 [Complete API reference](https://npu3pak.github.io/ios-lib-overlays/index.html)
 
-Library for displaying an empty list message or a loading indicator. You can show any custom view atop of a view controller content.
+A library for displaying an empty list message or a loading indicator. You can show any custom view atop of a view controller content.
+
+![Overview image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/Overview.gif)
 
 ## Requirements
 - iOS 9+
@@ -24,11 +26,86 @@ pod 'Overlays'
 
 ## Usage
 
+### Prepare overlay view
+
+Create a custom class for the overlay view. Implement the OverlayView protocol.
+
+```swift
+import Overlays
+
+class CustomOverlay: UIView, OverlayView {
+}
+```
+
 ### Inside a View Controller
+
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
+
+```swift
+import Overlays
+
+class CustomOverlayViewController: UIViewController {
+    @IBOutlet var overlay: CustomOverlay!
+
+    func show() {
+        showOverlay(overlay)
+    }
+
+    func hide() {
+        hideOverlay()
+    }
+```
 
 ### Atop of a View
 
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
+
+```swift
+import Overlays
+...
+@IBOutlet var overlay: CustomOverlay!
+@IBOutlet weak var containerView: UIView!
+
+func show() {
+    containerView.showOverlay(overlay)
+}
+
+func hide() {
+    containerView.hideOverlay()
+}
+...
+```
+
 ### Above the keyboard
+
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/AboveKeyboard.gif)
+
+```swift
+import Overlays
+
+class CustomOverlayViewController: UIViewController {
+    @IBOutlet var overlay: CustomOverlay!
+
+    private lazy var keyboardAwareOverlays = KeyboardAwareOverlays(controller: self)
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        keyboardAwareOverlays.startListeningKeyboardEvents()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        keyboardAwareOverlays.stopListeningKeyboardEvents()
+    }
+
+    func show() {
+        keyboardAwareOverlays.showOverlay(overlay)
+    }
+
+    func hide() {
+        keyboardAwareOverlays.hideOverlay()
+    }
+```
 
 ## Example
 
@@ -36,7 +113,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Author
 
-Evgeniy Safronov, evsafronov.personal@yandex.ru
+Evgeniy Safronov, evsafronov.personal@yandex.ru, https://ios-dev.ru
 
 ## License
 
