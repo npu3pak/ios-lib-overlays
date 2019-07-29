@@ -12,7 +12,7 @@
     "Evgeniy Safronov": "evsafronov.personal@yandex.ru"
   },
   "source": {
-    "git": "https://github.com/Evgeniy Safronov/Overlays.git",
+    "git": "https://github.com/npu3pak/ios-lib-overlays.git",
     "tag": "0.1.0"
   },
   "platforms": {
