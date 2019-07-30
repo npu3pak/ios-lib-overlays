@@ -13,7 +13,7 @@
     <a title="Overlays  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Overlays Docs</a> (100% documented)</p>
+        <p><a href="index.html">Overlays Docs</a> (96% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -31,6 +31,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/KeyboardAwareOverlays.html">KeyboardAwareOverlays</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OverlayTemplate.html">OverlayTemplate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/OverlayTemplateAlignment.html">OverlayTemplateAlignment</a>
               </li>
             </ul>
           </li>
@@ -86,7 +97,7 @@ it, simply add the following line to your Podfile:</p>
 <h2 id='example' class='heading'>Example</h2>
 
 <p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
-<h3 id='prepare-overlay-view' class='heading'>Prepare overlay view</h3>
+<h3 id='prepare-the-overlay-view' class='heading'>Prepare the overlay view</h3>
 
 <p>Create a custom class for the overlay view. Implement the OverlayView protocol.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
@@ -94,6 +105,37 @@ it, simply add the following line to your Podfile:</p>
 <span class="kd">class</span> <span class="kt">CustomOverlay</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt">OverlayView</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre>
+<h3 id='creating-overlay-views-with-template' class='heading'>Creating overlay views with template</h3>
+
+<p>You can use OverlayTemplate class to make overlays.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+<span class="o">...</span>
+<span class="k">let</span> <span class="nv">overlay</span> <span class="o">=</span> <span class="kt">OverlayTemplate</span><span class="p">(</span><span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Empty"</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addSeparator</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addHeadline</span><span class="p">(</span><span class="s">"No results :("</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addSeparator</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addSubhead</span><span class="p">(</span><span class="s">"Please try again later."</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addSeparator</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addButton</span><span class="p">(</span><span class="s">"Retry"</span><span class="p">,</span> <span class="nv">listener</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">self</span><span class="o">.</span><span class="nf">reload</span><span class="p">()</span> <span class="p">})</span>
+<span class="nf">showOverlay</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/OverlayTemplate.png" alt="Example image"></p>
+
+<p>You can integrate custom progress indicators as well.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
+<span class="kd">import</span> <span class="kt">MBProgressHUD</span>
+<span class="o">...</span>
+<span class="k">let</span> <span class="nv">hudContainer</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+<span class="kt">MBProgressHUD</span><span class="o">.</span><span class="nf">showAdded</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">hudContainer</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">overlay</span> <span class="o">=</span> <span class="kt">OverlayTemplate</span><span class="p">(</span><span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span>
+<span class="n">overlay</span><span class="o">.</span><span class="nf">addView</span><span class="p">(</span><span class="n">hudContainer</span><span class="p">)</span>
+<span class="nf">showOverlay</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/MBProgressHUD.png" alt="Example image"></p>
 <h3 id='displaying-inside-a-view-controller' class='heading'>Displaying inside a View Controller</h3>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Overlays</span>
 
@@ -160,12 +202,13 @@ it, simply add the following line to your Podfile:</p>
 <p>Evgeniy Safronov, <a href="mailto:evsafronov.personal@yandex.ru">evsafronov.personal@yandex.ru</a>, <a href="https://ios-dev.ru">https://ios-dev.ru</a></p>
 <h2 id='license' class='heading'>License</h2>
 
-<p>Overlays is available under the MIT license. See the LICENSE file for more info.</p>
+<p>Overlays is available under the MIT license. See the LICENSE file for more info.
+The <a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> library, used in the example project, is available under the MIT license.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/npu3pak/ios-lib-overlays" target="_blank" rel="external">Evgeniy Safronov</a>. All rights reserved. (Last updated: 2019-07-29)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/npu3pak/ios-lib-overlays" target="_blank" rel="external">Evgeniy Safronov</a>. All rights reserved. (Last updated: 2019-07-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

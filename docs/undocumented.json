@@ -1,6 +1,12 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/evsafronov/Projects/Overlays/Overlays/Classes/OverlayTemplate.swift",
+      "line": 34,
+      "symbol": "OverlayTemplate.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/evsafronov/Projects/Overlays"
 }
