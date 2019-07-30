@@ -55,6 +55,7 @@ overlay.addSubhead("Please try again later.")
 overlay.addSeparator(20)
 overlay.addButton("Retry", listener: { [unowned self] in self.reload() })
 showOverlay(overlay)
+...
 ```
 
 ![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/OverlayTemplate.png)
@@ -71,6 +72,7 @@ MBProgressHUD.showAdded(to: hudContainer, animated: false)
 let overlay = OverlayTemplate(alignment: .center)
 overlay.addView(hudContainer)
 showOverlay(overlay)
+...
 ```
 
 ![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/MBProgressHUD.png)
@@ -90,6 +92,8 @@ class CustomOverlayViewController: UIViewController {
     func hide() {
         hideOverlay()
     }
+...
+}
 ```
 
 ![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
@@ -141,6 +145,8 @@ class CustomOverlayViewController: UIViewController {
     func hide() {
         keyboardAwareOverlays.hideOverlay()
     }
+...
+}
 ```
 
 ![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/AboveKeyboard.gif)
