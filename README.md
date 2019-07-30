@@ -28,7 +28,7 @@ pod 'Overlays'
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-### Prepare overlay view
+### Prepare the overlay view
 
 Create a custom class for the overlay view. Implement the OverlayView protocol.
 
@@ -116,3 +116,4 @@ Evgeniy Safronov, evsafronov.personal@yandex.ru, https://ios-dev.ru
 ## License
 
 Overlays is available under the MIT license. See the LICENSE file for more info.
+The [MBProgressHUD](https://github.com/jdg/MBProgressHUD) library, used in the example project, is available under the MIT license.
