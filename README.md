@@ -39,6 +39,42 @@ class CustomOverlay: UIView, OverlayView {
 }
 ```
 
+### Creating overlay views with template
+
+You can use OverlayTemplate class to make overlays.
+
+```swift
+import Overlays
+...
+let overlay = OverlayTemplate(alignment: .center)
+overlay.addImage(named: "Empty")
+overlay.addSeparator(30)
+overlay.addHeadline("No results :(")
+overlay.addSeparator(8)
+overlay.addSubhead("Please try again later.")
+overlay.addSeparator(20)
+overlay.addButton("Retry", listener: { [unowned self] in self.reload() })
+showOverlay(overlay)
+```
+
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/OverlayTemplate.png)
+
+You can integrate custom progress indicators as well.
+
+```swift
+import Overlays
+import MBProgressHUD
+...
+let hudContainer = UIView()
+MBProgressHUD.showAdded(to: hudContainer, animated: false)
+
+let overlay = OverlayTemplate(alignment: .center)
+overlay.addView(hudContainer)
+showOverlay(overlay)
+```
+
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/MBProgressHUD.png)
+
 ### Displaying inside a View Controller
 
 ```swift
