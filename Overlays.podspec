@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'Overlays'
   s.platform         = :ios
   s.ios.deployment_target = '9.0'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Show any view atop of a view controller content.'
   s.homepage         = 'https://github.com/npu3pak/ios-lib-overlays'
   s.documentation_url = 'https://npu3pak.github.io/ios-lib-overlays'
