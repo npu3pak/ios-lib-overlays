@@ -116,7 +116,7 @@ func hide() {
 ...
 ```
 
-![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/ViewController.gif)
+![Example image](https://raw.githubusercontent.com/npu3pak/ios-lib-overlays/master/Images/View.gif)
 
 ### Displaying above the keyboard
 
